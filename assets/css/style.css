@@ -23,3 +23,7 @@
   -ms-transition: none !important;
   -o-transition: none !important;
 }
+
+body {
+  background-image: radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}

@@ -67,6 +67,9 @@ module.exports = {
           DEFAULT: '#555',
           dark: '#333',
         },
+        dark: 'hsl(229, 25%, 31%)',
+        score: 'hsl(229, 64%, 46%)',
+        outline: 'hsl(217, 16%, 45%)',
       },
       fontFamily: {
         body: 'Open Sans',

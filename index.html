@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock | Paper | Scissors</title>
+    <title>Rock, Paper, Scissors</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,20 @@
       rel="stylesheet"
     />
   </head>
-  <body class="preload">
+  <body class="preload min-h-screen">
+    <header class="container pt-10">
+      <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-5 border-2 border-outline rounded-lg">
+        <div id="title">
+          <img src="/assets/images/logo.svg" alt="Logo" />
+        </div>
+        <div id="score-box" class="flex flex-col gap-y-1 bg-white min-w-fit w-28 p-3 rounded-lg text-center">
+          <span class="font-display font-bold text-sm text-score tracking-widest">SCORE</span>
+          <h1 id="score" class="font-display text-6xl text-dark">0</h1>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
