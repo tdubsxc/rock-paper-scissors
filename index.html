@@ -13,20 +13,55 @@
       rel="stylesheet"
     />
   </head>
-  <body class="preload min-h-screen">
-    <header class="container pt-10">
-      <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-5 border-2 border-outline rounded-lg">
-        <div id="title">
-          <img src="/assets/images/logo.svg" alt="Logo" />
+  <body class="preload font-body min-h-screen">
+    <div class="container space-y-16">
+      <header class="pt-10">
+        <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-5 border-2 border-outline rounded-xl">
+          <div id="title">
+            <img src="/assets/images/logo.svg" alt="Logo" />
+          </div>
+          <div id="score-box" class="flex flex-col gap-y-1 bg-white min-w-fit w-28 p-3 rounded-lg text-center">
+            <span class="font-display font-bold text-sm text-score tracking-widest">SCORE</span>
+            <h1 id="score" class="font-display text-6xl text-dark">0</h1>
+          </div>
         </div>
-        <div id="score-box" class="flex flex-col gap-y-1 bg-white min-w-fit w-28 p-3 rounded-lg text-center">
-          <span class="font-display font-bold text-sm text-score tracking-widest">SCORE</span>
-          <h1 id="score" class="font-display text-6xl text-dark">0</h1>
+      </header>
+      <main id="game" class="max-w-3xl mx-auto">
+        <div class="flex flex-wrap justify-center">
+          <button
+            id="paper"
+            class="btn p-0 w-36 h-36 bg-white rounded-full bg-gradient-to-b from-[#4865f4] to-[#5671f5] md:w-40 md:h-40"
+          >
+            <div class="flex justify-center items-center bg-white w-28 h-28 rounded-full md:w-32 md:h-32">
+              <img src="/assets/images/icon-paper.svg" alt="Paper" />
+            </div>
+          </button>
+          <button
+            id="scissors"
+            class="btn p-0 w-36 h-36 bg-white rounded-full bg-gradient-to-b from-[#ec9e0e] to-[#eca922] md:w-40 md:h-40"
+          >
+            <div class="flex justify-center items-center bg-white w-28 h-28 rounded-full md:w-32 md:h-32">
+              <img src="/assets/images/icon-scissors.svg" alt="Scissors" />
+            </div>
+          </button>
+          <button
+            id="rock"
+            class="btn p-0 w-36 h-36 bg-white rounded-full bg-gradient-to-b from-[#dc2e4e] to-[#dd405d] md:w-40 md:h-40"
+          >
+            <div class="flex justify-center items-center bg-white w-28 h-28 rounded-full md:w-32 md:h-32">
+              <img src="/assets/images/icon-rock.svg" alt="Rock" />
+            </div>
+          </button>
         </div>
-      </div>
-    </header>
-    <main></main>
-    <footer></footer>
+      </main>
+      <footer class="text-white text-center bottom-10 right-10 xl:fixed">
+        <button
+          class="btn text-sm border-2 border-white rounded-lg tracking-widest md:text-base hover:bg-white hover:text-black"
+        >
+          RULES
+        </button>
+      </footer>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
