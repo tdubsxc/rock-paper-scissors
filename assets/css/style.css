@@ -47,7 +47,7 @@ body {
   justify-items: center;
   align-items: center;
   column-gap: 3rem;
-  row-gap: 1.75rem;
+  row-gap: 1rem;
   max-width: 28rem;
   margin: 0 auto;
 }
@@ -188,10 +188,6 @@ body {
   display: none;
 }
 
-.results__status {
-  margin-top: 24px;
-}
-
 .results__result {
   position: relative;
   z-index: -1;
@@ -201,7 +197,18 @@ body {
   background-color: #16213d;
 }
 
+.results__result--winner::after {
+  position: relative;
+  z-index: -5;
+  box-shadow: 0 0 0 20px #293251, 0 0 0 40px #232c4b, 0 0 0 60px #1e2949;
+}
+
 @media (min-width: 768px) {
+  .game {
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+  }
+
   .hand--bigger {
     transform: scale(1.25);
   }
@@ -220,10 +227,22 @@ body {
       'user-title . ai-title'
       'user-pick outcome ai-pick';
   }
+
+  .results__result--winner {
+    position: relative;
+    z-index: -5;
+    box-shadow: 0 0 0 30px #293251, 0 0 0 60px #232c4b, 0 0 0 90px #1e2949;
+  }
 }
 
 @media (min-width: 1024px) {
   .hand--bigger {
     transform: scale(1.5);
+  }
+
+  .results__result--winner {
+    position: relative;
+    z-index: -5;
+    box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 120px #1e2949;
   }
 }
