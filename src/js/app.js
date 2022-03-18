@@ -84,11 +84,11 @@ function showWinnerUI(results) {
     if (userWins) {
       resultsMsgEl.innerHTML = 'YOU WIN';
       resultsEls[0].classList.add('results__result--winner');
-      // updateScore(1);
+      updateScore(1);
     } else if (aiWins) {
       resultsMsgEl.innerHTML = 'YOU LOSE';
       resultsEls[1].classList.add('results__result--winner');
-      // updateScore(-1);
+      updateScore(-1);
     } else {
       resultsMsgEl.innerHTML = 'DRAW';
     }
@@ -102,6 +102,11 @@ function determineWinner(results) {
   return results[0].beats === results[1].name;
 }
 
+function updateScore(n) {
+  score += n;
+  scoreEl.innerHTML = score;
+}
+
 function playAgain() {
   gameEl.classList.toggle('game--hidden');
   resultsEl.classList.toggle('results--hidden');
@@ -110,7 +115,9 @@ function playAgain() {
   resultsStatusEl.classList.toggle('results__status--hidden');
   resultsEls.forEach((resultEl) => {
     resultEl.innerHTML = '';
-    resultEl.classList.remove('results__result--winner');
+    if (resultEl.classList.contains('results__result--winner')) {
+      resultEl.classList.remove('results__result--winner');
+    }
   });
 }
 
