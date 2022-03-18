@@ -14,11 +14,11 @@
     />
   </head>
   <body class="preload font-body text-gray-100 min-h-screen overflow-y-hidden">
-    <div class="container space-y-8 md:space-y-12 lg:space-y-16">
+    <div class="container space-y-16">
       <header class="pt-6">
         <div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-5 border-2 border-outline rounded-xl">
           <div id="title">
-            <img src="/assets/images/logo.svg" alt="Logo" />
+            <img src="/logo.svg" alt="Logo" />
           </div>
           <div id="score-box" class="flex flex-col gap-y-1 bg-white min-w-fit w-28 p-3 rounded-lg text-center">
             <span class="font-display font-bold text-sm text-score tracking-wider">SCORE</span>
@@ -30,17 +30,17 @@
         <section class="game">
           <button class="btn hand paper hover:-translate-y-1" data-pick="paper">
             <div class="hand-inner">
-              <img src="/assets/images/icon-paper.svg" alt="Paper" />
+              <img src="/icon-paper.svg" alt="Paper" />
             </div>
           </button>
           <button class="btn hand scissors hover:-translate-y-1" data-pick="scissors">
             <div class="hand-inner">
-              <img src="/assets/images/icon-scissors.svg" alt="Scissors" />
+              <img src="/icon-scissors.svg" alt="Scissors" />
             </div>
           </button>
           <button class="btn hand rock col-span-2 hover:-translate-y-1" data-pick="rock">
             <div class="hand-inner">
-              <img src="/assets/images/icon-rock.svg" alt="Rock" />
+              <img src="/icon-rock.svg" alt="Rock" />
             </div>
           </button>
         </section>
@@ -62,7 +62,7 @@
           <div class="results__result"></div>
         </section>
       </main>
-      <footer class="text-center bottom-10 right-10 md:fixed">
+      <footer class="absolute bottom-10 left-1/2 -translate-x-1/2 md:fixed">
         <button
           id="rules"
           class="btn text-sm border-2 border-white rounded-lg tracking-wider md:text-base hover:bg-white hover:text-black"
@@ -79,11 +79,11 @@
             id="close-modal"
             class="btn absolute bottom-10 p-1 rounded-full shadow-none hover:shadow-none md:static"
           >
-            <img src="/assets/images/icon-close.svg" alt="Close" />
+            <img src="/icon-close.svg" alt="Close" />
           </button>
         </div>
         <div class="relative bottom-10 md:static md:mt-10">
-          <img src="/assets/images/image-rules.svg" alt="Rules" />
+          <img src="/image-rules.svg" alt="Rules" />
         </div>
       </div>
     </div>
